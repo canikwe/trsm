@@ -1,0 +1,20 @@
+  <% if @user.errors %>
+    <%= render partial: "shared/error_form" , locals: {new_object: @user} %> 
+  <%end%> 
+  
+  
+  <div class='form-container'>
+    <%= form_for @user do |u| %>
+      <div class='form-label'>
+        <%= u.label :name%>
+      </div>
+  
+      <div class='form-input'>
+        <%= u.text_field :name%>
+      </div>
+
+      <div class='form-input'>
+        <%= u.submit%>
+      </div>
+    <%end%>
+  </div>

@@ -1,0 +1,28 @@
+<h1>Log a New Visit</h1>
+
+<div class='form-container'>
+
+  <%= form_for @visit do |v| %>
+    <div class='form-label'>
+      <%= v.label :user %>
+    </div>
+
+    <div class='form-select'>
+      <%= v.collection_select(:user_id, User.all, :id, :name) %><br />
+    </div>
+
+    <div class='form-label'>
+      <%= v.label :location %>
+    </div>
+
+    <div class='form-select'>
+      <%= v.collection_select(:location_id, Location.all, :id, :name) %>
+    </div>
+
+    <div class='form-input'>
+      <%= v.submit %>
+    </div>
+
+  <% end %>
+
+</div>

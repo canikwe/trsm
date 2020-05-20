@@ -1,0 +1,39 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: gold;
+  color: white;
+}
+
+#user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#delete-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#delete-btn:hover {
+  text-decoration: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}

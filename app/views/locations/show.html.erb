@@ -1,0 +1,36 @@
+<div id='location-show'>
+
+  <div class='header'>
+    <h1><%= @location.name %></h1>
+  </div>
+  
+  <div class='img'>
+    <%= image_tag(@location.image) %>
+  </div>
+  
+  <div class='desc'>
+    <h3>Description:</h3>
+    <p><%= @location.description %></p>
+  </div>
+  
+  
+  <div class='address'>
+    <h3>Address:</h3>
+    <p><%= @location.address %></p>
+  </div>
+    
+  <div class='fee'>
+    <% if @location.users.count == 0 %>
+    <h3>Fee:</h3>
+    <p>$ <%= @location.admission_fee.round %></p>
+    <% else %>
+    <h4><%= @location.users.count %> other(s) have enjoyed this location. For $ <%= @location.admission_fee.round %>, you can too!</h4>
+    <% end %>
+  </div>
+  
+  <div class='links'>
+    <%= link_to "Edit Location", edit_location_path(@location)%> | 
+    <%= link_to "Delete Location", location_path(@location), method: :delete %>
+  </div>
+
+</div>

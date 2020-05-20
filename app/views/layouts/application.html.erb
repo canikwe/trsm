@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trsm</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Solway&display=swap" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <ul id='nav'>
+      <li><%= link_to  "Sign Up", new_user_path %></li>
+      <li><%= link_to  "All Users", users_path %></li>
+      <li><%= link_to  "Locations", locations_path %></li>
+      <li><%= link_to  "Log Visit", new_visit_path %></li>
+    </ul>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ #nav {
+   display: flex;
+   justify-content: flex-end;
+   background-color: aquamarine;
+   list-style-type: none;
+   margin: 0;
+  }
+  
+  #nav li a {
+    display: block;
+    font-size: 1.25em;
+    margin-left: 5px;
+    padding: 10px;
+    color: rgb(80, 80, 80);
+  }
+  
+  #nav li a:hover {
+    background-color: gray;
+    text-decoration: none;
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: gray
+ }
+
+ a:hover {
+   text-decoration: underline;
+ }
+
+ a:visited {
+   color: black;
+ }
+
+ body {
+   margin: 0px;
+   font-family: 'Solway', serif;
+   color: rgb(80, 80, 80);
+   background-color: ivory;
+ }
+
+ .form-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ form {
+   display: grid;
+   grid-template-columns: repeat(5, 100px);
+   grid-auto-rows: auto;
+   align-items: center;
+ }
+
+ .form-label {
+  grid-column: 1 / 2;
+}
+
+ .form-input {
+   grid-column: 2 / -1;
+ }
+
+ .form-input input, .form-input textarea, .form-select select {
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px;
+   font-size: 12px;
+   border-style: none;
+   box-shadow: 0px 0px 1px 1px lightgray;
+ }
+
+ .form-select select {
+   width: 500px;
+   margin: 15px;
+   font-size: 16px;
+ }
+
+ input[type='submit']{
+  background-color: gold;
+ }
+
+ input[type='submit']:hover{
+  background-color: gray;
+  color: white;
+ }
+
+ h1 {
+   text-align: center;
+ }
